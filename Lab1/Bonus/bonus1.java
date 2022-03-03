@@ -131,7 +131,7 @@ public class bonus1 {
                     subset = (ArrayList<String>) subsetDFS.clone();
                     boolean flag = false;
 
-                    if(isSubset(subset)) {
+                    if(!isSubset(subset)) {
                         maxSubsetLength = 0;
                         subset.removeAll(subset);
                     }
@@ -163,16 +163,16 @@ public class bonus1 {
     }
 
     private static boolean isSubset(ArrayList<String> possibleSubset){
-        boolean flag = false;
+        
         for(int j = 0; j < subset.size() - 1;j ++){
             if(!isNeighbor(subset.get(j), subset.get(j + 1))){
-                flag = true;
+                return false;
             }
         }
         if(!isNeighbor(subset.get(0), subset.get(subset.size() - 1))){
-            flag = true;
+            return false;
         }
-        return !flag;
+        return true;
     }
 
 }
