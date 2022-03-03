@@ -3,6 +3,9 @@
 * [Tehnologii](#tehnologii)
 
 ## Informatii generale
+Algoritmul propus aplica o parcurgere DFS pentru fiecare cuvant care are cel putin doi vecini. Dupa fiecare parcurgere se verifica daca fiecare cuvant este vecin cu cel din fata lui si daca ultimul este vecin cu primul. La final se variabila subset va memora subset-ul maxim. Complexitatea algoritmului este n^2logn.
+
+
 Algoritmul descris este impartit intr-o singura clasa cu 9 metode :
 * [main](#main)
 * [readArgs](#readargs)
