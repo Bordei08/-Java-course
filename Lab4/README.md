@@ -1,7 +1,7 @@
 
 # Laboratorul 4
 
- * [Compulsory](#Compulsory) :x:
+ * [Compulsory](#Compulsory) :heavy_check_mark:
  * [Homewrok](#homework) :heavy_check_mark:
  * [Bonus](#bonus) :hourglass:
 
