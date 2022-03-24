@@ -3,7 +3,7 @@
 
  * [Compulsory](#Compulsory) :heavy_check_mark:
  * [Homewrok](#homework) :heavy_check_mark:
- * [Bonus](#bonus) :hourglass:
+ * [Bonus](#bonus) :heavy_check_mark:
 
 ## Enunt
 
@@ -45,4 +45,21 @@ Este implementat in Homework, dar nu este trimis la timp :disappointed_relieved:
 
 ## Bonus 
 
-In curand
+Varianta propusa nu implementeaza problema TSP ci face o parcurgere pe MST, compexitatea find  O(m log(n) + mn).
+
+### Enunt
+
+The city hall wants to regularly inspect the surveillance cameras, sending a maintenance car to go through it all.
+
+ * Implement an algorithm that determines the route of the maintenance car, in order to minimize the total length. The algorithm must run fast and should not find a solution that is twice as bad than the optimum route. :heavy_check_mark:
+ * Create a random problem generator, making sure that the lengths between intersections satisfy the triangle inequality. :heavy_check_mark:
+
+
+Costul pentru exemplul din laborator.
+![image](https://user-images.githubusercontent.com/79217056/159949969-930660cf-455a-4bc8-ae11-2c461094f7bd.png)
+
+
+Costul pentru o instanta random cu 100 de noduri si 200 de muchi
+
+![image](https://user-images.githubusercontent.com/79217056/159950289-0b85726c-c139-4d66-ac40-988814f70a60.png)
+
