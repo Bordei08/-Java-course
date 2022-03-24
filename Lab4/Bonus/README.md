@@ -53,4 +53,12 @@ Aceasta clasa "reduce" un obiect de tip City la unul de tip Graph pentru a usura
  
  
  # Tehnologii
+* java.util.List;
+  * java.util.ArrayList;
+  * java.util.*;
+  * org.jgrapht.Graph;
+  * org.jgrapht.alg.spanning.KruskalMinimumSpanningTree;
+  * org.jgrapht.graph.DefaultWeightedEdge;
+  * org.jgrapht.graph.SimpleWeightedGraph;
+  * Maven
 
