@@ -1,0 +1,47 @@
+package homework.catalog;
+
+
+
+public class Article extends Item implements java.io.Serializable{
+
+    private String years;
+    private String author;
+
+   public Article(String type,String id, String title, String location, String years, String author){
+        setType(type);
+       setId(id);
+        setTitle(title);
+        setLocation(location);
+        this.years = years;
+        this.author = author;
+    }
+
+   public  Article(){
+
+    }
+
+    public String getYears() {
+        return years;
+    }
+
+    public void setYears(String years) {
+        this.years = years;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String toString() {
+        return "name='" + getTitle() + '\'' +
+                ", path='" + getLocation() + '\'' +
+                ", author='" + author + '\'' +
+                ", year=" + years +
+                ", id=" + getId() ;
+
+    }
+}
