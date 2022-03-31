@@ -10,6 +10,11 @@ import homework.exceptions.*;
 import org.apache.tika.exception.TikaException;
 import org.xml.sax.SAXException;
 
+
+/**
+ * Clasa abstracta comanda care va fii template pentru toate comenzile implementate
+ */
+
 public abstract class Command {
 
     public abstract void execute(Catalog catalog, Scanner scanner) throws IOException, InvalidCatalogPath, InvalidPathException, InvalidAuthorException, InvalidYearException, TemplateException, InvalidItemCatalogException, InvalidType2Exception, InvalidAtricleException, SAXException, TikaException;

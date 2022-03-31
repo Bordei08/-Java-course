@@ -13,6 +13,11 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 
+/**
+ * Aceasta clasa implementeaza o comanda care va adauga un item nou in catalog
+ * Inaite de a fi adaugat un item trebuie sa respecte anumite standarde, iar in cazul in care nu sunt respectate se va arunca o exceptie
+ */
+
 public class AddCommand extends Command {
 
 
@@ -29,6 +34,10 @@ public class AddCommand extends Command {
 
         name = scanner.next();
 
+
+        if(!Files.exists(Path.of(path))) {
+            throw new InvalidPathException(path);
+        }
         path = scanner.next();
 
 

@@ -8,6 +8,7 @@ import java.util.List;
 public class Catalog implements java.io.Serializable {
     private String name;
     private List<Item> items = new ArrayList<>();
+
     private String path;
    public Catalog(String name, String path){
         this.name = name;

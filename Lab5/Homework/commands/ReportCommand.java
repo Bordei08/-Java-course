@@ -18,11 +18,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Aceasta clasa implementeaza un obiect care va creea un raport HTML al obiectului catalog
+ * Initial vom configura locatia fisierului si vom seta un template pentru acesta, template ul pentru raportul html este in fisierul item.ftl
+ * Apoi vom face o mapare conform template ului dat
+ * Dupa ce am creat fiserul il voi deschide in browser ul nativ
+ */
+
 public class ReportCommand extends  Command{
     @Override
     public void execute(Catalog catalog, Scanner scanner) throws IOException, InvalidCatalogPath, InvalidPathException, InvalidAuthorException, InvalidYearException, TemplateException, InvalidItemCatalogException, InvalidType2Exception {
         Configuration cfg = new Configuration(new Version("2.3.23"));
-        cfg.setDirectoryForTemplateLoading(new File("C:\\Users\\Bordei Mihai Gabi\\Desktop"));
+        cfg.setDirectoryForTemplateLoading(new File("D:\\"));
         cfg.setClassForTemplateLoading(this.getClass(), "/");
         Template template = cfg.getTemplate("items.ftl");
         Map<String, Object> templateData = new HashMap<>();
@@ -31,7 +38,7 @@ public class ReportCommand extends  Command{
         templateData.put("catalogPath", catalog.getPath());
         templateData.put("items", catalog.getItems());
 
-        Writer file = new FileWriter("D:\\reportcatalog.html");
+        Writer file = new FileWriter("D:\\Report\\reportcatalog.html");
         template.process(templateData, file);
         file.flush();
         file.close();

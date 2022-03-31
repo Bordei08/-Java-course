@@ -14,6 +14,11 @@ import org.apache.tika.sax.BodyContentHandler;
 
 import org.xml.sax.SAXException;
 
+
+/**
+ * Aceasta clasa implemneteaza o functie care va afisa metadatele unui fisier.
+ */
+
 public class MetadataItem {
 
     public  void getMetadata( String fileName) throws IOException, TikaException, SAXException {

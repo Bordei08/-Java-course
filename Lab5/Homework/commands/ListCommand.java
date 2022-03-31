@@ -8,6 +8,13 @@ import homework.exceptions.*;
 import java.io.IOException;
 import java.util.Scanner;
 
+
+/**
+ * Aceasta clasa implementeaza doua metode :
+ * execute , care va afisa elementele din catalogul primit ca parametru
+ * getCommandName, numele comenzii
+ */
+
 public class ListCommand extends Command {
 
     @Override
