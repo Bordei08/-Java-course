@@ -18,6 +18,8 @@ The main specifications of the application are:
 
 ## Compulsory
 
+Din pcate nu l-am trimis la timp....
+
 ### Enunt
 
 Create an object-oriented model of the problem. You should have at least the following classes: Catalog and Item. The items should have at least a unique identifier, a title and its location. Consider using an interface or an abstract class in order to describe the items in a catalog. :heavy_check_mark:
