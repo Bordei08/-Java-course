@@ -1,7 +1,7 @@
 # Laboratorul 6
 
   * [Compulsory](#Compulsory) :heavy_check_mark:
-  * [Homework](#homework)
+  * [Homework](#homework)  :heavy_check_mark:
   * [Bonus](#bonus)
 
 ## Enunt
@@ -30,3 +30,33 @@ Create the following components:
 ![image](https://user-images.githubusercontent.com/79217056/161819049-b3acfd72-9f27-416c-b8f6-ac1fbc0320a6.png)
 
 ## Homework
+
+### Enunt 
+
+ * Create the object oriented model.  :heavy_check_mark:
+ * Initialize the game by generating random sticks and place them on the board. Implement either direct or retained mode for drawing the game board.  :heavy_check_mark:
+ * Implement the logic of the game. When the player execute a mouse pressed operation, a stone must be drawn at the mouse location: red or blue depending on whose turn it is. Validate the move, according to the game rules. Determine the winner of the game.  :heavy_check_mark:
+ * (+0.5p) Export the current image of the game board into a PNG file.  :heavy_check_mark:
+ * (+0.5p) Use object serialization in order to save and restore the current status of the game.  ❌
+
+
+Tabla generata pentru dimensiunile 3 cu 5
+
+![image](https://user-images.githubusercontent.com/79217056/162073421-81ce0bec-eef5-46b7-bac1-6b12bda4967a.png)
+
+Logica jocului 
+
+![image](https://user-images.githubusercontent.com/79217056/162073548-61afeaab-08a5-4fc4-b522-a7e3583b884b.png)
+
+Printscreen la joc:
+
+![image](https://user-images.githubusercontent.com/79217056/162073739-de0d8b28-43ec-414d-8d5e-50cec6842d77.png)
+
+
+## Bonus
+
+### Enunt
+
+ * Prove that the player who starts the game has always a winning strategy if and only if the corresponding graph does not have a perfect matching.
+ * Based on the above observation, implement an AI for the game.
+
