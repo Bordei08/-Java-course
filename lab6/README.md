@@ -60,7 +60,11 @@ Printscreen la joc:
  * Prove that the player who starts the game has always a winning strategy if and only if the corresponding graph does not have a perfect matching. :heavy_check_mark:
  * Based on the above observation, implement an AI for the game. :heavy_check_mark:
  
- N : Am considerat ca jocul ca find un fel de problema damelor dar fara deplasare pe diagonala (problema turelor), nu stiu sigur daca am inteles bine ...
+ N : 
+ 
+ Programul este acelasi cu cel din homework doar metoda drawStone este modificata si sunt adaugate 5 metode noi pentru a decide cea mai buna miscare
+ 
+ Am considerat ca jocul ca find un fel de problema damelor dar fara deplasare pe diagonala (problema turelor), nu stiu sigur daca am inteles bine ...
 
 Un meci pe o tabla de 5 pe 5 (AI ul joaca cu  albastru) :
 
