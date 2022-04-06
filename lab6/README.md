@@ -2,7 +2,7 @@
 
   * [Compulsory](#Compulsory) :heavy_check_mark:
   * [Homework](#homework)  :heavy_check_mark:
-  * [Bonus](#bonus)
+  * [Bonus](#bonus) :heavy_check_mark:
 
 ## Enunt
 
@@ -57,6 +57,16 @@ Printscreen la joc:
 
 ### Enunt
 
- * Prove that the player who starts the game has always a winning strategy if and only if the corresponding graph does not have a perfect matching.
- * Based on the above observation, implement an AI for the game.
+ * Prove that the player who starts the game has always a winning strategy if and only if the corresponding graph does not have a perfect matching. :heavy_check_mark:
+ * Based on the above observation, implement an AI for the game. :heavy_check_mark:
+ 
+ N : 
+ 
+ Programul este acelasi cu cel din homework doar metoda drawStone este modificata si sunt adaugate 5 metode noi pentru a decide cea mai buna miscare
+ 
+ Am considerat ca jocul ca find un fel de problema damelor dar fara deplasare pe diagonala (problema turelor), nu stiu sigur daca am inteles bine ...
+
+Un meci pe o tabla de 5 pe 5 (AI ul joaca cu  albastru) :
+
+![image](https://user-images.githubusercontent.com/79217056/162090910-0bdb8c01-622c-4794-b8d1-c39bc8cfdc33.png)
 
