@@ -1,4 +1,4 @@
-package homework;
+package projectSQL;
 
 import java.io.IOException;
 import java.io.PrintWriter;

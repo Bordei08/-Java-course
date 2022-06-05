@@ -1,0 +1,133 @@
+DROP TABLE Students CASCADE CONSTRAINTS;
+/
+create table Students
+(
+    id          int not null,
+    last_name   VARCHAR2(20),
+    first_name  VARCHAR2(20),
+    gender int,
+    average     int,
+    faculty     VARCHAR2(20),
+   year int,
+   preference1 VARCHAR2(50),
+    preference2 VARCHAR2(50),
+   preference3 VARCHAR(50),
+    preference4 varchar2(50)
+)
+/
+DROP TABLE student_dorms CASCADE CONSTRAINTS;
+/
+CREATE TABLE student_dorms(
+id int not null,
+name VARCHAR2(20),
+capacity_boys int,
+capacity_girls VARCHAR(20)
+)
+/
+/
+INSERT INTO student_dorms VALUES(1,'C1',2,2);
+/
+INSERT INTO student_dorms VALUES(2, 'C2', 5, 2);
+/
+INSERT INTO student_dorms VALUES(3,'C3',5, 0);
+/
+INSERT INTO student_dorms VALUES(4,'C4',2, 2);
+/
+INSERT INTO student_dorms VALUES(5,'C5',5, 2);
+/
+INSERT INTO student_dorms VALUES(6,'C10',5, 2);
+/
+INSERT INTO student_dorms VALUES(7,'C12',5, 2);
+
+/
+DROP TABLE faculty CASCADE CONSTRAINTS;
+
+/
+CREATE TABLE faculty(
+id int not null,
+name VARCHAR2(20)
+)
+/
+INSERT INTO faculty VALUES(1,'FII');
+/
+INSERT INTO faculty VALUES(2,'FMI');
+/
+
+insert into faculty VALUES(3,'FCI');
+/
+SET SERVEROUTPUT ON;
+DECLARE
+TYPE varr IS VARRAY(4000) OF varchar2(255);
+   lista_nume varr := varr('Ababei','Acasandrei','Adascalitei','Afanasie','Agafitei','Agape','Aioanei','Alexandrescu','Alexandru','Alexe','Alexii','Amarghioalei','Ambroci','Andonesei','Andrei','Andrian','Andrici','Andronic','Andros','Anghelina','Anita','Antochi','Antonie','Apetrei','Apostol','Arhip','Arhire','Arteni','Arvinte','Asaftei','Asofiei','Aungurenci','Avadanei','Avram','Babei','Baciu','Baetu','Balan','Balica','Banu','Barbieru','Barzu','Bazgan','Bejan','Bejenaru','Belcescu','Belciuganu','Benchea','Bilan','Birsanu','Bivol','Bizu','Boca','Bodnar','Boistean','Borcan','Bordeianu','Botezatu','Bradea','Braescu','Budaca','Bulai','Bulbuc-aioanei','Burlacu','Burloiu','Bursuc','Butacu','Bute','Buza','Calancea','Calinescu','Capusneanu','Caraiman','Carbune','Carp','Catana','Catiru','Catonoiu','Cazacu','Cazamir','Cebere','Cehan','Cernescu','Chelaru','Chelmu','Chelmus','Chibici','Chicos','Chilaboc','Chile','Chiriac','Chirila','Chistol','Chitic','Chmilevski','Cimpoesu','Ciobanu','Ciobotaru','Ciocoiu','Ciofu','Ciornei','Citea','Ciucanu','Clatinici','Clim','Cobuz','Coca','Cojocariu','Cojocaru','Condurache','Corciu','Corduneanu','Corfu','Corneanu','Corodescu','Coseru','Cosnita','Costan','Covatariu','Cozma','Cozmiuc','Craciunas','Crainiceanu','Creanga','Cretu','Cristea','Crucerescu','Cumpata','Curca','Cusmuliuc','Damian','Damoc','Daneliuc','Daniel','Danila','Darie','Dascalescu','Dascalu','Diaconu','Dima','Dimache','Dinu','Dobos','Dochitei','Dochitoiu','Dodan','Dogaru','Domnaru','Dorneanu','Dragan','Dragoman','Dragomir','Dragomirescu','Duceac','Dudau','Durnea','Edu','Eduard','Eusebiu','Fedeles','Ferestraoaru','Filibiu','Filimon','Filip','Florescu','Folvaiter','Frumosu','Frunza','Galatanu','Gavrilita','Gavriliuc','Gavrilovici','Gherase','Gherca','Ghergu','Gherman','Ghibirdic','Giosanu','Gitlan','Giurgila','Glodeanu','Goldan','Gorgan','Grama','Grigore','Grigoriu','Grosu','Grozavu','Gurau','Haba','Harabula','Hardon','Harpa','Herdes','Herscovici','Hociung','Hodoreanu','Hostiuc','Huma','Hutanu','Huzum','Iacob','Iacobuta','Iancu','Ichim','Iftimesei','Ilie','Insuratelu','Ionesei','Ionesi','Ionita','Iordache','Iordache-tiroiu','Iordan','Iosub','Iovu','Irimia','Ivascu','Jecu','Jitariuc','Jitca','Joldescu','Juravle','Larion','Lates','Latu','Lazar','Leleu','Leon','Leonte','Leuciuc','Leustean','Luca','Lucaci','Lucasi','Luncasu','Lungeanu','Lungu','Lupascu','Lupu','Macariu','Macoveschi','Maftei','Maganu','Mangalagiu','Manolache','Manole','Marcu','Marinov','Martinas','Marton','Mataca','Matcovici','Matei','Maties','Matrana','Maxim','Mazareanu','Mazilu','Mazur','Melniciuc-puica','Micu','Mihaela','Mihai','Mihaila','Mihailescu','Mihalachi','Mihalcea','Mihociu','Milut','Minea','Minghel','Minuti','Miron','Mitan','Moisa','Moniry-abyaneh','Morarescu','Morosanu','Moscu','Motrescu','Motroi','Munteanu','Murarasu','Musca','Mutescu','Nastaca','Nechita','Neghina','Negrus','Negruser','Negrutu','Nemtoc','Netedu','Nica','Nicu','Oana','Olanuta','Olarasu','Olariu','Olaru','Onu','Opariuc','Oprea','Ostafe','Otrocol','Palihovici','Pantiru','Pantiruc','Paparuz','Pascaru','Patachi','Patras','Patriche','Perciun','Perju','Petcu','Pila','Pintilie','Piriu','Platon','Plugariu','Podaru','Poenariu','Pojar','Popa','Popescu','Popovici','Poputoaia','Postolache','Predoaia','Prisecaru','Procop','Prodan','Puiu','Purice','Rachieru','Razvan','Reut','Riscanu','Riza','Robu','Roman','Romanescu','Romaniuc','Rosca','Rusu','Samson','Sandu','Sandulache','Sava','Savescu','Schifirnet','Scortanu','Scurtu','Sfarghiu','Silitra','Simiganoschi','Simion','Simionescu','Simionesei','Simon','Sitaru','Sleghel','Sofian','Soficu','Sparhat','Spiridon','Stan','Stavarache','Stefan','Stefanita','Stingaciu','Stiufliuc','Stoian','Stoica','Stoleru','Stolniceanu','Stolnicu','Strainu','Strimtu','Suhani','Tabusca','Talif','Tanasa','Teclici','Teodorescu','Tesu','Tifrea','Timofte','Tincu','Tirpescu','Toader','Tofan','Toma','Toncu','Trifan','Tudosa','Tudose','Tuduri','Tuiu','Turcu','Ulinici','Unghianu','Ungureanu','Ursache','Ursachi','Urse','Ursu','Varlan','Varteniuc','Varvaroi','Vasilache','Vasiliu','Ventaniuc','Vicol','Vidru','Vinatoru','Vlad','Voaides','Vrabie','Vulpescu','Zamosteanu','Zazuleac');
+  lista_prenume_fete varr := varr('Adina','Alexandra','Alina','Ana','Anca','Anda','Andra','Andreea','Andreia','Antonia','Bianca','Camelia','Claudia','Codrina','Cristina','Daniela','Daria','Delia','Denisa','Diana','Ecaterina','Elena','Eleonora','Elisa','Ema','Emanuela','Emma','Gabriela','Georgiana','Ileana','Ilona','Ioana','Iolanda','Irina','Iulia','Iuliana','Larisa','Laura','Loredana','Madalina','Malina','Manuela','Maria','Mihaela','Mirela','Monica','Oana','Paula','Petruta','Raluca','Sabina','Sanziana','Simina','Simona','Stefana','Stefania','Tamara','Teodora','Theodora','Vasilica','Xena');
+  lista_prenume_baieti varr := varr('Adrian','Alex','Alexandru','Alin','Andreas','Andrei','Aurelian','Beniamin','Bogdan','Camil','Catalin','Cezar','Ciprian','Claudiu','Codrin','Constantin','Corneliu','Cosmin','Costel','Cristian','Damian','Dan','Daniel','Danut','Darius','Denise','Dimitrie','Dorian','Dorin','Dragos','Dumitru','Eduard','Elvis','Emil','Ervin','Eugen','Eusebiu','Fabian','Filip','Florian','Florin','Gabriel','George','Gheorghe','Giani','Giulio','Iaroslav','Ilie','Ioan','Ion','Ionel','Ionut','Iosif','Irinel','Iulian','Iustin','Laurentiu','Liviu','Lucian','Marian','Marius','Matei','Mihai','Mihail','Nicolae','Nicu','Nicusor','Octavian','Ovidiu','Paul','Petru','Petrut','Radu','Rares','Razvan','Richard','Robert','Roland','Rolland','Romanescu','Sabin','Samuel','Sebastian','Sergiu','Silviu','Stefan','Teodor','Teofil','Theodor','Tudor','Vadim','Valentin','Valeriu','Vasile','Victor','Vlad','Vladimir','Vladut');
+  lista_camine varr := varr('C1','C2','C3','C4','C5','C10', 'C12');
+  lista_fac varr := varr('FII', 'FMI','FCI');
+ id int;
+  v_nume VARCHAR2(15);
+  v_prenume VARCHAR2(15);
+  v_temp int;
+  v_matr int;
+   gender int;
+    avarage   int;
+    faculty     VARCHAR2(20);
+    year int;
+    preference1 VARCHAR2(50);
+    preference2 VARCHAR2(50);
+    preference3 VARCHAR(50);
+    preference4 varchar2(50);
+ 
+BEGIN
+FOR v_i IN 1..1000 LOOP
+      v_nume := lista_nume(TRUNC(DBMS_RANDOM.VALUE(0,lista_nume.count))+1);
+ IF (DBMS_RANDOM.VALUE(0,100)<50) THEN 
+            gender := 0;
+           v_prenume := lista_prenume_fete(TRUNC(DBMS_RANDOM.VALUE(0,lista_prenume_fete.count))+1);
+       ELSE
+            gender := 1;
+           v_prenume := lista_prenume_baieti(TRUNC(DBMS_RANDOM.VALUE(0,lista_prenume_fete.count))+1);
+       END IF;
+ 
+    year := DBMS_RANDOM.VALUE(0,2) + 1;
+   
+    preference1 := lista_camine(TRUNC(DBMS_RANDOM.VALUE(0,lista_camine.count))+1);
+    
+    LOOP
+            preference2 := lista_camine(TRUNC(DBMS_RANDOM.VALUE(0,lista_camine.count))+1);
+            EXIT WHEN preference1 != preference2;
+    END LOOP;
+    
+     LOOP
+            preference3 := lista_camine(TRUNC(DBMS_RANDOM.VALUE(0,lista_camine.count))+1);
+            EXIT WHEN preference3 != preference2 and preference3 != preference1  ; 
+    END LOOP;
+    
+    
+    LOOP
+            preference4 := lista_camine(TRUNC(DBMS_RANDOM.VALUE(0,lista_camine.count))+1);
+            EXIT WHEN preference4 != preference2 and preference4 != preference1  and preference3 != preference4; 
+    END LOOP;
+    
+    
+    faculty :=  lista_fac(TRUNC(DBMS_RANDOM.VALUE(0,lista_fac.count))+1);
+    
+LOOP
+    v_matr := DBMS_RANDOM.VALUE(1000,9999);
+    SELECT COUNT(*) INTO v_temp From Students Where v_matr = students.id;
+    EXIT WHEN v_temp = 0;
+    END LOOP;
+
+   avarage := DBMS_RANDOM.VALUE(600, 999);
+   
+   id := v_matr;
+
+INSERT INTO students VALUES(id, v_nume, v_prenume, gender, avarage,faculty,year,preference1, preference2,preference3,preference4);
+    
+     END LOOP;
+  END;
+  /
+  Select * from students ;
+  Select * from student_dorms;
+  
+  
+
