@@ -1,4 +1,4 @@
-# ViR (Video Review Manager)
+# SDR (Student Dorms Repartition)
 
 ## Overview
 
